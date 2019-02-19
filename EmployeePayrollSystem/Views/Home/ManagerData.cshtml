@@ -1,0 +1,62 @@
+﻿@model List<EmployeePayrollSystem.Models.ViewAllData>
+@{
+    ViewBag.Title = "ManagerData";
+}
+
+<h2>ManagerData</h2>
+
+<table class="table">
+    <tr>
+        <th>
+           Employee Name
+        </th>
+        <th>
+            Department Name
+        </th>
+        <th>
+            Designation Name
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+           Mobile
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.employee.EmpName
+            </td>
+            <td>
+                @item.department.DepttName
+            </td>
+            <td>
+                @item.designation.DesiName
+            </td>
+            <td>
+                @item.employee.Address
+            </td>
+            <td>
+                @item.employee.Gender
+            </td>
+            <td>
+                @item.employee.Email
+            </td>
+            <td>
+                @item.employee.Mobile
+            </td>
+            
+        </tr>
+    }
+
+</table>
